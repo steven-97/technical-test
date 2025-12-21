@@ -8,4 +8,10 @@ class Product {
     }
 }
 
-module.exports = Product;
+// arreglo para manejo de productos en memoria
+const products = [];
+
+module.exports = {
+    Product,
+    products
+};
