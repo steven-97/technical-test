@@ -1,8 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const productsRoutes = require('./routes/products.js');
 const port = 3000;
 
+app.use(cors());
 app.use(express.json());
 
 // Rutas para productos

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 let products = [];
+let currentId = 1;
 
 // GET /products - Get all products
 router.get('/', (req, res) => {
@@ -28,7 +29,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     const { name, descr, price } = req.body;
     const newProduct = {
-        id: products.length + 1,
+        id: currentId++,
         name,
         descr,
         price,
